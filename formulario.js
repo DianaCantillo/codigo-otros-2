@@ -1,8 +1,10 @@
-var formulario = document.querySelector("#form")
-
+var formulario = document.querySelector(".formulario")
+//Se corrigio el selector del formulario y se agrega el botón
+//submit
+const btnSubmit = document.getElementById("submit")
 formulario.onsubmit = function(e) {
 
-  e.prevent();
+  e.preventDefault(); //Se agrega Default al e.preventDefault
   
   var n = formulario.elements[0]
   var e = formulario.elements[1]
@@ -94,4 +96,10 @@ elementoLista.appendChild(botonBorrar);
 // this.parentNode.style.display = 'none';
 botonBorrar.parentNode.remove()
   }
-}
+} //funcion agregar invitado
+
+//Se agrega el addEventListener para el botón submit
+submit.addEventListener("click", function(agregarInvitado){
+  agregarInvitado.preventDefault();
+  
+})
